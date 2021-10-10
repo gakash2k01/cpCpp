@@ -2,29 +2,29 @@
 #define int long long
 using namespace std;
 const int mod=1e9+7;
-int binexpmod(int a,int n)
+int binexpmod(int a,int n,int m)
 {
     int p=1;
     while(n>0)
     {
         if(n%2!=0)
-            p=(p*(a%mod))%mod;
+            p=(p*(a%m))%m;
         a*=a;
-        a%=mod;
-        n=n>>1;
+        a%=m;
+        n=n>>1ll;
     }
-    cout<<"Got: "<<(p%mod)<<endl;
-    return p%mod;
+    //cout<<"Got: "<<(p%mod)<<endl;
+    return p%m;
 }
 void solve()
 {
     //write ur code here
     int k;
     cin>>k;
-    int n=binexpmod(2,k);
-    n-=2;
-    int p=binexpmod(4,n);
-    p*=6;
+    int n=binexpmod(2,k,mod-1);
+    n-=2ll;
+    int p=binexpmod(4,n,mod);
+    p*=6ll;
     p%=mod;
     cout<<p<<"\n";
 }
