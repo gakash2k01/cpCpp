@@ -46,7 +46,7 @@ int32_t main()
     }
     return 0;
 }
-// isko change karo
+isko change karo
 seive se etf calculate hoga
 uske baad prefix-sum array bana lo
 answer prefixsum hoga hamesha n ka
