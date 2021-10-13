@@ -72,9 +72,7 @@ int32_t main()
     cin>>t1;
     while(t1--)
     {
-        //cout<<"Test :"<<(16-t1)<<endl;
         solve();
-        
     }
     return 0;
 }
