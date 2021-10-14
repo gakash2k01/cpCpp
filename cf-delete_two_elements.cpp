@@ -7,30 +7,29 @@ void solve()
     cin>>n;
     int x;
     int sum=0;
-    unordered_map <int,int> a;
+    map <int,int> a;
     for(int i=0;i<n;i++)
     {
         cin>>x;
         sum+=x;
-        if(a.find(x)==a.end())
-            a[x]=1;
-        else
             a[x]++;
     }
     int cnt=0;
+    int k=(2*sum)/n;
+    //cout<<"k="<<k<<endl;
+    if(2*sum % n != 0)
+    {
+        cout<<0<<"\n";
+        return;
+    }
     for(auto m:a)
     {
-        int j = (del - avg + m.first);
-        if(j==m.first && a[j]>1)
-        {
-            cnt++;
-            continue;
-        }
-        if(a.find(j)==a.end())
-            continue;
-        cnt++;
+        if(m.first==k-m.first)
+            cnt+=((a[m.first]*(a[m.first]-1)));
+        else if(a.count(k-m.first))
+            cnt+=(a[m.first]*a[k-m.first]);
     }
-    cout<<cnt<<"\n";
+    cout<<(cnt>>1)<<"\n";
 }
 int32_t main()
 {
