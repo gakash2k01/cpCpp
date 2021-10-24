@@ -4,13 +4,11 @@ using namespace std;
 void solve()
 {
     //write ur code here
-    int n,x;
-    cin>>n;
-    map <int,int> a;
-    for(int i=0;i<n;i++)
-    {
-        
-    }
+    int x,k;
+    cin>>x>>k;
+    int ma=x*k*(x*k -1);
+    int mi=x*2;
+    cout<<mi<<" "<<ma<<"\n";
 }
 int32_t main()
 {

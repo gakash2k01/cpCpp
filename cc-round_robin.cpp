@@ -3,14 +3,11 @@
 using namespace std;
 void solve()
 {
-    //write ur code here
-    int n,x;
-    cin>>n;
-    map <int,int> a;
-    for(int i=0;i<n;i++)
-    {
-        
-    }
+    //write ur code 
+    int n,k;
+    cin>>n>>k;
+    int ans=(n*(n-1))/2 - ((n-k)*(n-k-1))/2;
+    cout<<2*(ans/k)<<endl;
 }
 int32_t main()
 {

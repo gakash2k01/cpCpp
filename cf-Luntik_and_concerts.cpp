@@ -4,13 +4,10 @@ using namespace std;
 void solve()
 {
     //write ur code here
-    int n,x;
-    cin>>n;
-    map <int,int> a;
-    for(int i=0;i<n;i++)
-    {
-        
-    }
+    int a,b,c;
+    cin>>a>>b>>c;
+    int n=a+2*b+3*c;
+    cout<<(n%2)<<endl;
 }
 int32_t main()
 {
