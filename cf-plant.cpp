@@ -1,34 +1,31 @@
 #include <bits/stdc++.h>
 #define int long long
 using namespace std;
-int rec_fib(int a,int b, int n)
+const int mod = 1e9+7;
+int power(int b)
 {
-    if(n==0)
-        return a+b;
-    return rec_fib(b,a+b,n-1);
-
-}
-void solve1()
-{
-    int n;
-    cin>>n;
-    int a=0;
-    int b=1;
-    rec_fib(a,b,n)
+    int a=2;
+    int p=1;
+    while(b>0)
+    {
+        if(b%2==1)
+            p=(p*a)%mod;
+        a=(a*a)%mod;
+        b=b>>1;
+    }
+    return p;
 }
 void solve()
 {
     //write ur code here
     int n;
-    int a=0,b=1,c;
-    //cout<<0<<" "<<1<<" ";
-    for(int i=2;i<=n;i++)
+    cin>>n;
+    if(n==0)
     {
-        c=a+b;
-        a=b;
-        b=c;
+        cout<<1<<endl;
+        return;
     }
-    cout<<b;
+    cout<<(((power(n)+1)*power(n-1))%mod)<<"\n";
 }
 int32_t main()
 {
