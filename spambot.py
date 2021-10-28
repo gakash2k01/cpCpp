@@ -1,8 +1,8 @@
 import pyautogui, time, datetime
 
-time.sleep(20)
+time.sleep(30)
 
-for i in range(500):
+for i in range(1000):
 	
 	# to display the time at which the message is sent
 	print(datetime.datetime.now())
